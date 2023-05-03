@@ -1,0 +1,1 @@
+# devextreme-default-appointment-template-for-scheduler
