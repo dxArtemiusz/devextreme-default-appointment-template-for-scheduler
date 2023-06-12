@@ -1,0 +1,30 @@
+<div class="dx-tooltip-appointment-item">
+    <div class="dx-tooltip-appointment-item-marker">
+        <div
+            class="dx-tooltip-appointment-item-marker-body"
+            [style.background-color]="markerColor" 
+        ></div>
+    </div>
+
+    <div class="dx-tooltip-appointment-item-content">
+        <div class="dx-tooltip-appointment-item-content">
+            <div class="dx-tooltip-appointment-item-content-subject">
+                {{appointmentData.text}}
+            </div>
+            <div class="dx-tooltip-appointment-item-content-date">
+                {{appointmentData.startDate}}
+            </div>
+        </div>
+    </div>
+    <div
+        *ngIf="isDeleteButtonExist"
+        class="dx-tooltip-appointment-item-delete-button-container"
+    >
+        <dx-button
+            class="dx-tooltip-appointment-item-delete-button"
+            icon="trash"
+            stylingMode="text"
+            (onClick)="onDeleteButtonClick.emit($event)"
+        ></dx-button>
+    </div>
+</div>
